@@ -13,6 +13,8 @@ var (
 )
 
 func getAWSConfig() {
-	REGION = os.Getenv(KEY_REGION)
-	ENDPOINT = os.Getenv(KEY_ENDPOINT)
+	if len(REGION) == 0 {
+		REGION = os.Getenv(KEY_REGION)
+		ENDPOINT = os.Getenv(KEY_ENDPOINT)
+	}
 }

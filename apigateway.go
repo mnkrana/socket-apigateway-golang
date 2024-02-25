@@ -35,7 +35,5 @@ func post(input *apigatewaymanagementapi.PostToConnectionInput) {
 	_, err := apiGateway.PostToConnection(input)
 	if err != nil {
 		log.Fatalln("Error posting to connection", err.Error())
-	} else {
-		log.Println("Successfully posted to connection")
 	}
 }
